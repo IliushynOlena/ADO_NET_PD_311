@@ -86,10 +86,6 @@ namespace _01_ConnectedMode
             #endregion
 
 
-
-
-
-
             sqlConnection.Close();  
         }
     }
