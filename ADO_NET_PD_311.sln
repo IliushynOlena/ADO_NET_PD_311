@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_ConnectedMode", "01_Conn
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_CRUD_Interface", "02_CRUD_Interface\02_CRUD_Interface.csproj", "{B1664CB8-A5CE-4A13-AAB3-06F2320FD7D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Client", "WPF_Client\WPF_Client.csproj", "{A8D2206F-4F00-4EB1-A35F-A43446864E01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Client", "WPF_Client\WPF_Client.csproj", "{A8D2206F-4F00-4EB1-A35F-A43446864E01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "data_access", "data_access\data_access.csproj", "{D79AAFDE-4D76-40AF-B1D4-B8858D4DC34C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "data_access", "data_access\data_access.csproj", "{D79AAFDE-4D76-40AF-B1D4-B8858D4DC34C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_IntroToEntityFramework", "03_IntroToEntityFramework\03_IntroToEntityFramework.csproj", "{719E5765-D031-40FA-B1AF-9498F45A786A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D79AAFDE-4D76-40AF-B1D4-B8858D4DC34C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D79AAFDE-4D76-40AF-B1D4-B8858D4DC34C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D79AAFDE-4D76-40AF-B1D4-B8858D4DC34C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{719E5765-D031-40FA-B1AF-9498F45A786A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{719E5765-D031-40FA-B1AF-9498F45A786A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{719E5765-D031-40FA-B1AF-9498F45A786A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{719E5765-D031-40FA-B1AF-9498F45A786A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
