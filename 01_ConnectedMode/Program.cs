@@ -7,6 +7,7 @@ namespace _01_ConnectedMode
     {
         static void Main(string[] args)
         {
+          
             // Connection String - містить всю інформацію для підключення до сервера в
             // певному форматі
             /* SQL Server:

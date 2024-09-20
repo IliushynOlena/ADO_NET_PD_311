@@ -1,8 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using _03_IntroToEntityFramework.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,11 +31,14 @@ namespace _03_IntroToEntityFramework
                                                 Trust Server Certificate=False;
                                                 Application Intent=ReadWrite;
                                                 Multi Subnet Failover=False");
+
+        
+           
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            //Initialization 
+            //Initialization - Seeder
             modelBuilder.Entity<Airplane>().HasData(
                 new Airplane[]
                 {
@@ -51,11 +52,11 @@ namespace _03_IntroToEntityFramework
                     new Flight()
                     {
                          Number = 1,
-                          ArrivalCity = "Lviv",
-                          BoardingCity = "Rivne",
-                           ArrivalTime = new DateTime(2024,9,25),
-                           BoardingTime = new DateTime(2024,9,25),
-                            AirplaneId = 1
+                         ArrivalCity = "Lviv",
+                         BoardingCity = "Rivne",
+                         ArrivalTime = new DateTime(2024,9,25),
+                         BoardingTime = new DateTime(2024,9,25),
+                         AirplaneId = 1
                     },
                     new Flight()
                     {
@@ -69,59 +70,14 @@ namespace _03_IntroToEntityFramework
                     new Flight()
                     {
                          Number = 3,
-                          ArrivalCity = "Lviv",
-                          BoardingCity = "Warshav",
-                           ArrivalTime = new DateTime(2024,9,25),
-                           BoardingTime = new DateTime(2024,9,25),
-                            AirplaneId = 3
+                         ArrivalCity = "Lviv",
+                         BoardingCity = "Warshav",
+                         ArrivalTime = new DateTime(2024,9,25),
+                         BoardingTime = new DateTime(2024,9,25),
+                         AirplaneId = 3
+                          
                     }
                 });
         }
     }
-    //Entities = class Airplane Client Flight
-    public class Airplane
-    {
-        //Primary Key naming : Id/id/ID, EntityName+Id
-        public int Id { get; set; }
-        [Required]//null => not null
-        [MaxLength(100)]
-        public string Model { get; set; }
-        public int MaxPassanger { get; set; }
-        //Relationship type : One to Many (1......*)
-        public ICollection<Flight> Flights { get; set; }
-    }
-    [Table("Passangers")]
-    public class Client
-    {
-        public int Id { get; set; }
-        [Required]//null => not null
-        [MaxLength(100)]
-        [Column("FirstName")]
-        public string Name { get; set; }
-        [Required]//null => not null
-        [MaxLength(50)]
-        public string Email { get; set; }
-        public DateTime? Birhdate { get; set; }// ? -> not null - null
-        //Relationship type : Many to Many (*......*)
-        public ICollection<Flight> Flights { get; set; }
-
-    }
-    public class Flight
-    {
-        [Key]//primary key
-        public int Number { get; set; }
-        [Required, MaxLength(50)]//null => not null
-        public string ArrivalCity { get; set; }
-        [Required, MaxLength(50)]//null => not null
-        public string BoardingCity { get; set; }
-        public DateTime ArrivalTime { get; set; }
-        public DateTime BoardingTime { get; set; }
-        //Relationship type : One to Many (1......*)
-        public Airplane Airplane { get; set; }
-        //Foreing  key naming : RelatedEntityName + RelatedEntityPrimaryKeyName
-        public int AirplaneId { get; set; }//foreign key
-        //Relationship type : Many to Many (*......*)
-        public ICollection<Client> Clients { get; set; }
-     
-    } 
 }
