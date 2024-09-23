@@ -1,4 +1,5 @@
 ﻿using _03_IntroToEntityFramework.Entities;
+using _03_IntroToEntityFramework.Helpers;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
@@ -73,48 +74,13 @@ namespace _03_IntroToEntityFramework
             modelBuilder.Entity<Flight>()
                 .HasOne(f=> f.Airplane)
                 .WithMany(a => a.Flights)
-                .HasForeignKey(f=>f.AirplaneId);  
+                .HasForeignKey(f=>f.AirplaneId);
 
             //Initialization - Seeder
-            modelBuilder.Entity<Airplane>().HasData(
-                new Airplane[]
-                {
-                    new Airplane { Id = 1,Model = "Boeing 747", MaxPassanger = 300 },
-                    new Airplane { Id = 2,Model = "Mria", MaxPassanger = 200 },
-                    new Airplane { Id = 3,Model = "AN 225", MaxPassanger = 100 }
-                });
-            modelBuilder.Entity<Flight>().HasData(
-                new Flight[]
-                {
-                    new Flight()
-                    {
-                         Number = 1,
-                         ArrivalCity = "Lviv",
-                         BoardingCity = "Rivne",
-                         ArrivalTime = new DateTime(2024,9,25),
-                         BoardingTime = new DateTime(2024,9,25),
-                         AirplaneId = 1
-                    },
-                    new Flight()
-                    {
-                         Number = 2,
-                          ArrivalCity = "Lviv",
-                          BoardingCity = "Kyiv",
-                           ArrivalTime = new DateTime(2024,9,25),
-                           BoardingTime = new DateTime(2024,9,25),
-                            AirplaneId = 2
-                    },
-                    new Flight()
-                    {
-                         Number = 3,
-                         ArrivalCity = "Lviv",
-                         BoardingCity = "Warshav",
-                         ArrivalTime = new DateTime(2024,9,25),
-                         BoardingTime = new DateTime(2024,9,25),
-                         AirplaneId = 3
-                          
-                    }
-                });
+            modelBuilder.SeedAirplanes();
+            modelBuilder.SeedFlights();
+
+
         }
     }
 }
