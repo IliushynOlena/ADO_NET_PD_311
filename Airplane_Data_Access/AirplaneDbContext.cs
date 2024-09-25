@@ -1,12 +1,13 @@
-﻿using _03_IntroToEntityFramework.Entities;
-using _03_IntroToEntityFramework.Helpers;
+﻿
+using Airplane_Data_Access.Entities;
+using Airplane_Data_Access.Helpers;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _03_IntroToEntityFramework
+namespace Airplane_Data_Access
 {
     public class AirplaneDbContext : DbContext  
     {

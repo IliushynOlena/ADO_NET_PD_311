@@ -6,12 +6,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using _03_IntroToEntityFramework;
+using Airplane_Data_Access;
 
 namespace _03_IntroToEntityFramework.Migrations
 {
     [DbContext(typeof(AirplaneDbContext))]
-    [Migration("20240920130053_Initial")]
-    partial class Initial
+    [Migration("20240920131211_AddRating")]
+    partial class AddRating
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -127,6 +128,9 @@ namespace _03_IntroToEntityFramework.Migrations
 
                     b.Property<DateTime>("BoardingTime")
                         .HasColumnType("datetime2");
+
+                    b.Property<int?>("Rating")
+                        .HasColumnType("int");
 
                     b.HasKey("Number");
 

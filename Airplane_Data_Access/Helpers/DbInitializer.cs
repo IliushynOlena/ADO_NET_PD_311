@@ -1,4 +1,5 @@
-﻿using _03_IntroToEntityFramework.Entities;
+﻿
+using Airplane_Data_Access.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _03_IntroToEntityFramework.Helpers
+namespace Airplane_Data_Access.Helpers
 {
     public static class DbInitializer
     {

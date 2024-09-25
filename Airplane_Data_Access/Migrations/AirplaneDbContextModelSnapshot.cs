@@ -3,17 +3,16 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using _03_IntroToEntityFramework;
+using Airplane_Data_Access;
 
 namespace _03_IntroToEntityFramework.Migrations
 {
     [DbContext(typeof(AirplaneDbContext))]
-    [Migration("20240920131211_AddRating")]
-    partial class AddRating
+    partial class AirplaneDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

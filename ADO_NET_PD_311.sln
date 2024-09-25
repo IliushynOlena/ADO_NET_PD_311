@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Client", "WPF_Client\WP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "data_access", "data_access\data_access.csproj", "{D79AAFDE-4D76-40AF-B1D4-B8858D4DC34C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_IntroToEntityFramework", "03_IntroToEntityFramework\03_IntroToEntityFramework.csproj", "{719E5765-D031-40FA-B1AF-9498F45A786A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_IntroToEntityFramework", "03_IntroToEntityFramework\03_IntroToEntityFramework.csproj", "{719E5765-D031-40FA-B1AF-9498F45A786A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airplane_Data_Access", "Airplane_Data_Access\Airplane_Data_Access.csproj", "{91E6DDE7-3213-46E3-8324-812D845E1A69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{719E5765-D031-40FA-B1AF-9498F45A786A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{719E5765-D031-40FA-B1AF-9498F45A786A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{719E5765-D031-40FA-B1AF-9498F45A786A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91E6DDE7-3213-46E3-8324-812D845E1A69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91E6DDE7-3213-46E3-8324-812D845E1A69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91E6DDE7-3213-46E3-8324-812D845E1A69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91E6DDE7-3213-46E3-8324-812D845E1A69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

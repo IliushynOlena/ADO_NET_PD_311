@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace _03_IntroToEntityFramework.Entities
+namespace Airplane_Data_Access.Entities
 {
     public class Airplane
     {
